@@ -1,0 +1,31 @@
+Este modulo usa el programa Beagle
+para realizar faseado de haplotipos
+
+* Toma un archivo .vcf
+* Calcula los haplotipos
+* Convierte el output en un archivo .vcf
+
+# Inputs
+Este modulo recibe un archivo con la extensión .vcf y
+un mapa genetico con la extensión .map
+Ejemplo:
+
+gwas.vcf
+chr20_genetic.map
+
+# Output
+Este modulo crea un archivo de texto plano con la extension .vcf
+Ejemplo:
+
+out.beagle.ovcf
+
+# Dependencias
+ Java:
+ Version 1.8 (o versiones más actualizadas)
+
+ Beagle software program:
+ https://faculty.washington.edu/browning/beagle/beagle.html
+
+
+# Autores
+María Fernanda Mirón Toruño

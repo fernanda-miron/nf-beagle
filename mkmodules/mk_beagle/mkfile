@@ -1,0 +1,14 @@
+MKSHELL="/bin/bash"
+
+#target: OPCIONES: prereq
+#./test/data/puerco.a_la_parrilla:
+#./test/data/puerco.marinado
+# La opcion Q = QUIET no imprime todo
+
+%.wgz: %.o
+	gzip -d $prereq.vcf.gz
+
+%.o:Q: %.vcf $GENETIC_MAP
+	echo "[DEBUG] Voy a fasear el archivo $prereq"
+	echo "[DEBUG] El stem vale $stem"
+	java -jar beagle.18May20.d20.jar gt=$stem.vcf map=$GENETIC_MAP out=$target
